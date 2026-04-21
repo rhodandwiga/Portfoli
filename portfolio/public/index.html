@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My professional developer portfolio">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile-photo">
+                    <img src="/images/rhoda.png" alt="Profile Photo">
+                </div>
+                <div class="sidebar-intro">
+                    <h2>NDWIGA RHODA</h2>
+                    <p>Full-Stack Developer | UI/UX Designer | Graphic Designer</p>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Introduction</h3>
+                    <p>Hello there my name is RHODA I'm a passionate SOFTWARE ENGINEER focused on modern web experiences
+                        and UI/UX,AI trends and bringing ideas to life through
+                        code and design.</p>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <p><strong>B.Sc. Information Technology</strong><br>University of Technology</p>
+                    <p><strong>Software Engineering</strong><br>PLP Academy</p>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Certificates</h3>
+                    <div class="certificate-gallery">
+                        <div class="certificate-item" aria-label="Advanced Frontend Development certificate">
+                            <img src="/images/certificate.png" alt="Certificate placeholder">
+                            <div class="certificate-label">Software Engineering </div>
+                        </div>
+                        <div class="certificate-item" aria-label="Fullstack JavaScript Bootcamp certificate">
+                            <img src="/images/certificate.png" alt="Certificate placeholder">
+                            <div class="certificate-label">Fullstack JavaScript Bootcamp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <nav class="glass-nav">
+                <div class="logo">Portfo<span>lio.</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+            </nav>
+
+            <div class="mobile-menu glass-card" id="mobileMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <main>
+                <section id="home" class="hero section-reveal">
+                    <div class="hero-content glass-card">
+                        <h1>Hi, I'm a <span class="gradient-text">Software Developer</span></h1>
+                        <p>Building beautiful, dynamic, and modern web experiences using Node.js and modern frontend
+                            technologies.</p>
+                        <div class="hero-btns">
+                            <a href="#projects" class="btn primary-btn">View My Work</a>
+                            <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="about section-reveal">
+                    <h2 class="section-title">About Me</h2>
+                    
+                    <div class="about-container">
+                        <div class="bio-card glass-card">
+                            <p>I am a creative professional who bridges the gap between complex functionality and intuitive design. With a strong foundation in <strong>Information Technology</strong> and specialized training in <strong>Software Engineering</strong>, I build digital products that are as aesthetically pleasing as they are technically robust.</p>
+                        </div>
+
+                        <div class="services-list">
+                            <div class="service-block glass-card">
+                                <div class="service-header">
+                                    <span class="service-icon">🎨</span>
+                                    <h3>Graphic Design</h3>
+                                </div>
+                                <p>Creating visual identities and digital assets with impact.</p>
+                                <div class="service-tags">
+                                    <span>Photoshop</span>
+                                    <span>Illustrator</span>
+                                    <span>Branding</span>
+                                </div>
+                            </div>
+
+                            <div class="service-block glass-card">
+                                <div class="service-header">
+                                    <span class="service-icon">✨</span>
+                                    <h3>UI/UX Design</h3>
+                                </div>
+                                <p>User-centric interfaces that provide seamless experiences.</p>
+                                <div class="service-tags">
+                                    <span>Figma</span>
+                                    <span>Adobe XD</span>
+                                    <span>Prototyping</span>
+                                </div>
+                            </div>
+
+                            <div class="service-block glass-card">
+                                <div class="service-header">
+                                    <span class="service-icon">💻</span>
+                                    <h3>Development</h3>
+                                </div>
+                                <p>Scalable web apps using modern full-stack technologies.</p>
+                                <div class="service-tags">
+                                    <span>Node.js</span>
+                                    <span>PHP/Laravel</span>
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="projects section-reveal">
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="projects-grid" id="projectsGrid">
+                        <!-- Loaded dynamically from /api/projects -->
+                        <div class="loading-spinner">Loading projects…</div>
+                    </div>
+                </section>
+
+                <section id="contact" class="contact section-reveal">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <form class="contact-form glass-card" id="contactForm" novalidate>
+                        <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+                        <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn primary-btn" id="submitBtn">Send Message</button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="certificateModal" class="certificate-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Certificate viewer">
+        <div class="certificate-modal-content">
+            <span id="certificateModalClose" class="certificate-modal-close" aria-label="Close modal">&times;</span>
+            <div class="certificate-modal-body">
+                <img id="certificateModalImage" src="" alt="Expanded certificate">
+                <div id="certificateModalCaption" class="certificate-label"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

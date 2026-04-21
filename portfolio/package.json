@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Professional developer portfolio built with Node.js & Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "start /B node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "nodemailer": "^8.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
